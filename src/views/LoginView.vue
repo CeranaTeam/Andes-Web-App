@@ -6,8 +6,10 @@
   </div>
 </template>
 <script setup lang="ts">
-import { signIn } from '@/api/firebase'
+import { signIn, signOut } from '@/api/firebase'
 import router from '@/router'
+
+onMounted(() => signOut())
 
 const handleLogin = async () => {
   await signIn()

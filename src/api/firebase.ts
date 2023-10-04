@@ -57,9 +57,9 @@ export const signIn = () => signInWithPopup(auth, new GoogleAuthProvider())
 
 export const signOut = () => firebaseSignOut(auth)
 
-const unsubscribe = onAuthStateChanged(auth, (_user) => {
-  unsubscribe()
+export const unsubscribe = onAuthStateChanged(auth, async (_user) => {
   if (_user) {
     localStorage.setItem('user', JSON.stringify(_user))
+    localStorage.setItem('idToken', JSON.stringify(await _user.getIdToken()))
   }
 })
