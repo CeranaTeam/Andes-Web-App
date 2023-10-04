@@ -10,14 +10,23 @@ import {
 
 // import { user } from '@/composables/useUser'
 
+// const firebaseConfig = {
+//   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+//   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+//   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+//   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+//   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+//   appId: import.meta.env.VITE_FIREBASE_APP_ID,
+//   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+// }
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: 'AIzaSyCFJuWPv1RNGfRo_9FBRhoOnMVf-RQqAzs',
+  authDomain: 'andes-cloud.firebaseapp.com',
+  projectId: 'andes-cloud',
+  storageBucket: 'andes-cloud.appspot.com',
+  messagingSenderId: '61366890918',
+  appId: '1:613668909186:web:9720258a6b7b578838049b',
+  measurementId: 'G-SHDLPD75DW'
 }
 
 console.log('Mode:', import.meta.env.MODE)
