@@ -7,10 +7,29 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    ExchangeItemCard: typeof import('./src/components/ExchangeItemCard.vue')['default']
+    QRCodeReader: typeof import('./src/components/QRCodeReader.vue')['default']
+    RecordCard: typeof import('./src/components/RecordCard.vue')['default']
+    RecordTable: typeof import('./src/components/RecordTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VanButton: typeof import('vant/es')['Button']
+    VanCard: typeof import('vant/es')['Card']
+    VanCell: typeof import('vant/es')['Cell']
+    VanCellGroup: typeof import('vant/es')['CellGroup']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanField: typeof import('vant/es')['Field']
+    VanForm: typeof import('vant/es')['Form']
+    VanImage: typeof import('vant/es')['Image']
+    VanNavBar: typeof import('vant/es')['NavBar']
+    VanPullRefresh: typeof import('vant/es')['PullRefresh']
+    VanRadio: typeof import('vant/es')['Radio']
+    VanRadioGroup: typeof import('vant/es')['RadioGroup']
+    VanRollingText: typeof import('vant/es')['RollingText']
+    VanSearch: typeof import('vant/es')['Search']
+    VanSpace: typeof import('vant/es')['Space']
+    VanTabbar: typeof import('vant/es')['Tabbar']
+    VanTabbarItem: typeof import('vant/es')['TabbarItem']
+    VanTag: typeof import('vant/es')['Tag']
   }
 }

@@ -12,7 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "firebase": "^10.4.0",
+    "html5-qrcode": "^2.3.8",
     "unplugin-auto-import": "^0.16.6",
     "vant": "^4.7.0",
     "vue": "^3.3.4",
