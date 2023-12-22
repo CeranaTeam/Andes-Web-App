@@ -22,7 +22,7 @@ const onExchange = () => {
         title: "確認兌換？",
         message: `您將使用 ${props.point} 點兌換， ${props.title}，請確認是否兌換？`,
         confirmButtonText: "確認",
-                cancelButtonText: "取消",
+        cancelButtonText: "取消",
     })
         .then(() => {
             showDialog({
