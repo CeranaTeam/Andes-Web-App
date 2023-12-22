@@ -7,7 +7,7 @@ const collectPoints = async (trashCanId: string) => {
     const response = await fetch(
         `${import.meta.env.VITE_BASE_URL}/user/point/throwing/trash_can/${trashCanId}`,
         {
-            method: "GET",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 Authorization: getIdToken(),
