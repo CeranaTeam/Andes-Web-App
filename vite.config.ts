@@ -22,7 +22,28 @@ export default defineConfig({
                 enabled: true,
             },
         }),
-        VitePWA({ registerType: "autoUpdate" }),
+        VitePWA({
+            registerType: "autoUpdate",
+            includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
+            manifest: {
+                name: "Smart Bin",
+                short_name: "Smart Bin",
+                description: "Andes RISC-V Smart Bin",
+                theme_color: "#ffffff",
+                icons: [
+                    {
+                        src: "favicon/android-chrome-192x192.png",
+                        sizes: "192x192",
+                        type: "image/png",
+                    },
+                    {
+                        src: "favicon/android-chrome-512x512.png",
+                        sizes: "512x512",
+                        type: "image/png",
+                    },
+                ],
+            },
+        }),
     ],
     resolve: {
         alias: {
