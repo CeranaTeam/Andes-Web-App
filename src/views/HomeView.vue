@@ -9,12 +9,13 @@
             />
         </div>
         <div class="record-section">
-            <h2>最近紀錄</h2>
+            <h2 style="padding-left: 40px">最近紀錄</h2>
             <RecordTable :records="records" />
         </div>
         <div class="sign-out-button">
             <van-button size="small" round block @click="handleSignOut">登出</van-button>
         </div>
+        <div style="height: 60px" />
     </div>
 </template>
 <script setup lang="ts">

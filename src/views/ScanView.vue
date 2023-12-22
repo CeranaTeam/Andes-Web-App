@@ -15,7 +15,11 @@ const onDetect = async ({ decodedText, resume }: any) => {
     try {
         await collectPoints(decodedText)
     } catch (error) {
-        showNotify({ type: "danger", message: "發送請求失敗，可能你掃的不是我們的 QRCode。" })
+        showNotify({
+            type: "danger",
+            message: "發送請求失敗，可能你掃的不是我們的 QRCode。",
+            confirmButtonText: "確定",
+        })
     }
 
     setTimeout(resume, 1000)

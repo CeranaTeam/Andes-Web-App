@@ -3,6 +3,7 @@
         <van-search v-model="search" shape="round" placeholder="搜尋紀錄" />
         <van-pull-refresh class="record-wrapper" v-model="loading" @refresh="onRefresh">
             <RecordTable :records="filteredRecords" has-report> </RecordTable>
+            <div style="height: 60px" />
         </van-pull-refresh>
     </div>
 </template>

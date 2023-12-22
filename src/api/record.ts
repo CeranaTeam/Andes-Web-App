@@ -34,7 +34,7 @@ const getRecords = async (): Promise<DetectRecord[]> => {
         }
     })
 
-    return records
+    return records.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime())
 }
 
 export { getRecords }

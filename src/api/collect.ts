@@ -1,24 +1,23 @@
 import { getIdToken } from "@/api/auth"
 import { showNotify, showDialog } from "vant"
-import { useRouter } from "vue-router"
 
 const collectPoints = async (trashCanId: string) => {
     console.log(`${import.meta.env.VITE_API_URL}/user/point/throwing/trash_can/${trashCanId}`)
     const response = await fetch(
-        `${import.meta.env.VITE_BASE_URL}/user/point/throwing/trash_can/${trashCanId}`,
+        `${import.meta.env.VITE_API_URL}/user/point/throwing/trash_can/${trashCanId}`,
         {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: getIdToken(),
+                Authorization: `Bearer ${getIdToken()}`,
             },
         }
     )
 
-    if (!response.ok) {
-        showNotify({ type: "warning", message: "取得點數失敗，請稍後再試...", duration: 2000 })
-        return
-    }
+    // if (!response.ok) {
+    //     showNotify({ type: "warning", message: "取得點數失敗，請稍後再試...", duration: 2000 })
+    //     return
+    // }
 
     const parsed = (await response.json()) as any
 
@@ -31,9 +30,9 @@ const collectPoints = async (trashCanId: string) => {
         title: "成功取得點數",
         message: "將重新導向紀錄頁面...",
         theme: "round-button",
+        confirmButtonText: "確定",
     }).then(() => {
-        const router = useRouter()
-        router.push("/record")
+        window.location.href = "/record"
     })
 }
 

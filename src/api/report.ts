@@ -17,19 +17,21 @@ const reportLabelResult = async (detectRecordId: string, label: string) => {
     )
 
     if (!reponse.ok) {
-        showDialog({ message: "網路錯誤，請稍後再試..." })
+        showDialog({ message: "網路錯誤，請稍後再試...", confirmButtonText: "確定" })
         return
     }
 
     const parsed = await reponse.json()
     if (!parsed.success) {
-        showDialog({ message: parsed.error })
+        showDialog({ message: parsed.error, confirmButtonText: "確定" })
         return
     }
 
-    showDialog({ title: "回報成功", message: "獲得獎勵 5 點" }).then(() => {
-        history.back()
-    })
+    showDialog({ title: "回報成功", message: "獲得獎勵 5 點", confirmButtonText: "確認" }).then(
+        () => {
+            history.back()
+        }
+    )
 }
 
 export { reportLabelResult }
