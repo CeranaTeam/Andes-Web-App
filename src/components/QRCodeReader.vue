@@ -28,7 +28,7 @@ const qrCodeSuccessCallback = async (decodedText: string) => {
 
 onMounted(() => {
     html5QrCode = new Html5Qrcode("reader")
-    html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback, qrCodeErrorCallback)
+    html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback, qrCodeErrorCallback)
 })
 
 onUnmounted(async () => {
